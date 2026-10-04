@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>מפת המסע – החלפת משלמים</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 28px 16px 70px;
+        background: #f5f6fa;
+        color: #0f1113;
+        line-height: 1.6;
+      }
+      .wrap { max-width: 1120px; margin: 0 auto; }
+      h1 { font-size: 1.9rem; margin: 0 0 4px; }
+      .sub { color: #5d6272; margin: 0 0 22px; }
+      .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 18px; font-size: .9rem; }
+      .legend span { display: inline-flex; align-items: center; gap: 7px; }
+      .dot { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+      svg { width: 100%; height: auto; background: #fff; border-radius: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.07); }
+      .note { margin-top: 26px; background: #fff; border-radius: 14px; padding: 18px 22px; box-shadow: 0 1px 3px rgba(0,0,0,.07); }
+      .note h2 { font-size: 1.1rem; margin: 0 0 8px; }
+      .note ul { margin: 0; padding-inline-start: 22px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>מפת המסע של נועה</h1>
+      <p class="sub">מהרגע שהיא נכנסת לדירה ועד שהחשבון על שמה – ומה קורה במקביל אצל הצד השני ואצל הנציג.</p>
+
+      <div class="legend">
+        <span><i class="dot" style="background:#41ddcc"></i> נועה (הפונה)</span>
+        <span><i class="dot" style="background:#ffd35b"></i> הצד השני</span>
+        <span><i class="dot" style="background:#b595ff"></i> הנציג</span>
+        <span><i class="dot" style="background:#ff4d8d"></i> נקודת כשל שטיפלנו בה</span>
+      </div>
+
+      <svg viewBox="0 0 1120 640" style="direction:ltr" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="מפת מסע: זיהוי נכס, מה קרה, פרטים ומסמכים, שליחה, אישור הצד השני, בדיקת נציג, והחשבון עובר">
+        <defs>
+          <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0 0 L10 5 L0 10 z" fill="#5d6272" />
+          </marker>
+          <marker id="aPink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0 0 L10 5 L0 10 z" fill="#c2185b" />
+          </marker>
+        </defs>
+
+        <!-- פסי מסלול -->
+        <rect x="20" y="70" width="1080" height="150" rx="14" fill="#e2f8f5" />
+        <rect x="20" y="240" width="1080" height="150" rx="14" fill="#fff6d9" />
+        <rect x="20" y="410" width="1080" height="150" rx="14" fill="#f1ebff" />
+        <text x="1035" y="96" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b7f73" direction="rtl">נועה</text>
+        <text x="1035" y="266" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a6400" direction="rtl">הצד השני</text>
+        <text x="1035" y="436" text-anchor="middle" font-size="15" font-weight="bold" fill="#5b3fd6" direction="rtl">הנציג והמנהל</text>
+
+        <!-- שלבי נועה -->
+        <g font-size="13" fill="#0f1113">
+          <rect x="880" y="110" width="170" height="86" rx="10" fill="#fff" stroke="#41ddcc" stroke-width="2" />
+          <text x="965" y="134" text-anchor="middle" font-weight="bold" font-size="14">1 · זיהוי הנכס</text>
+          <text x="965" y="155" text-anchor="middle">חשבון מים / מספר</text>
+          <text x="965" y="173" text-anchor="middle">או מונה + ת.ז.</text>
+          <text x="965" y="191" text-anchor="middle" fill="#5d6272">אישור כתובת חלקית</text>
+
+          <rect x="700" y="110" width="160" height="86" rx="10" fill="#fff" stroke="#41ddcc" stroke-width="2" />
+          <text x="780" y="134" text-anchor="middle" font-weight="bold" font-size="14">2 · מה קרה?</text>
+          <text x="780" y="155" text-anchor="middle">מתחיל או מסיים</text>
+          <text x="780" y="173" text-anchor="middle">לשלם</text>
+          <text x="780" y="191" text-anchor="middle" fill="#5d6272">מה צריך להכין</text>
+
+          <rect x="520" y="110" width="160" height="86" rx="10" fill="#fff" stroke="#41ddcc" stroke-width="2" />
+          <text x="600" y="134" text-anchor="middle" font-weight="bold" font-size="14">3 · פרטים</text>
+          <text x="600" y="155" text-anchor="middle">תאריך וקריאה</text>
+          <text x="600" y="173" text-anchor="middle">צילום ת.ז. → OCR</text>
+          <text x="600" y="191" text-anchor="middle" fill="#5d6272">מסמך + הצד השני</text>
+
+          <rect x="340" y="110" width="160" height="86" rx="10" fill="#fff" stroke="#41ddcc" stroke-width="2" />
+          <text x="420" y="134" text-anchor="middle" font-weight="bold" font-size="14">4 · שליחה</text>
+          <text x="420" y="155" text-anchor="middle">סיכום והצהרה</text>
+          <text x="420" y="173" text-anchor="middle">מספר פנייה</text>
+          <text x="420" y="191" text-anchor="middle" fill="#5d6272">היציאה כבר בתוקף</text>
+
+          <rect x="150" y="110" width="170" height="86" rx="10" fill="#fff" stroke="#41ddcc" stroke-width="2" />
+          <text x="235" y="134" text-anchor="middle" font-weight="bold" font-size="14">5 · מעקב</text>
+          <text x="235" y="155" text-anchor="middle">מי צריך לפעול</text>
+          <text x="235" y="173" text-anchor="middle">השלמת חוסר</text>
+          <text x="235" y="191" text-anchor="middle" fill="#5d6272">בלי למלא מחדש</text>
+
+          <rect x="30" y="110" width="100" height="86" rx="10" fill="#0f1113" />
+          <text x="80" y="146" text-anchor="middle" font-weight="bold" font-size="14" fill="#fff">✓ החשבון</text>
+          <text x="80" y="166" text-anchor="middle" font-size="14" fill="#fff">עבר</text>
+        </g>
+
+        <!-- חצים בין שלבי נועה -->
+        <g stroke="#5d6272" stroke-width="2" marker-end="url(#a)" fill="none">
+          <path d="M876 153 H866" />
+          <path d="M696 153 H686" />
+          <path d="M516 153 H506" />
+          <path d="M336 153 H326" />
+          <path d="M146 153 H136" />
+        </g>
+
+        <!-- הצד השני -->
+        <g font-size="13">
+          <rect x="520" y="280" width="160" height="80" rx="10" fill="#fff" stroke="#ffd35b" stroke-width="2" />
+          <text x="600" y="304" text-anchor="middle" font-weight="bold" font-size="14">SMS + קוד</text>
+          <text x="600" y="324" text-anchor="middle">רואה מינימום</text>
+          <text x="600" y="342" text-anchor="middle">עד שמזדהה</text>
+
+          <rect x="340" y="280" width="160" height="80" rx="10" fill="#fff" stroke="#ffd35b" stroke-width="2" />
+          <text x="420" y="304" text-anchor="middle" font-weight="bold" font-size="14">מאשר את הקריאה</text>
+          <text x="420" y="324" text-anchor="middle">או מתאם תיקון</text>
+          <text x="420" y="342" text-anchor="middle" fill="#5d6272">ממלא רק את חלקו</text>
+
+          <rect x="150" y="280" width="170" height="80" rx="10" fill="#fff" stroke="#ffd35b" stroke-width="2" />
+          <text x="235" y="304" text-anchor="middle" font-weight="bold" font-size="14">לא הגיב 5 ימים</text>
+          <text x="235" y="326" text-anchor="middle">אושר בשתיקה</text>
+          <text x="235" y="345" text-anchor="middle" fill="#5d6272">(בכניסה לנכס)</text>
+        </g>
+
+        <!-- הנציג -->
+        <g font-size="13">
+          <rect x="520" y="450" width="160" height="80" rx="10" fill="#fff" stroke="#b595ff" stroke-width="2" />
+          <text x="600" y="474" text-anchor="middle" font-weight="bold" font-size="14">התור</text>
+          <text x="600" y="494" text-anchor="middle">חלוקה לפי עומס</text>
+          <text x="600" y="512" text-anchor="middle" fill="#5d6272">7 ימי עסקים</text>
+
+          <rect x="340" y="450" width="160" height="80" rx="10" fill="#fff" stroke="#b595ff" stroke-width="2" />
+          <text x="420" y="474" text-anchor="middle" font-weight="bold" font-size="14">בדיקה</text>
+          <text x="420" y="494" text-anchor="middle">AI מול המסמכים</text>
+          <text x="420" y="512" text-anchor="middle" fill="#5d6272">רק חריגים פתוחים</text>
+
+          <rect x="150" y="450" width="170" height="80" rx="10" fill="#fff" stroke="#b595ff" stroke-width="2" />
+          <text x="235" y="474" text-anchor="middle" font-weight="bold" font-size="14">החלטה</text>
+          <text x="235" y="494" text-anchor="middle">אישור / השלמה</text>
+          <text x="235" y="512" text-anchor="middle" fill="#5d6272">או הכרעת מנהל</text>
+        </g>
+
+        <!-- חיבורים בין המסלולים -->
+        <g stroke="#8a6400" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#a)">
+          <path d="M600 200 V276" />
+        </g>
+        <g stroke="#5b3fd6" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#a)">
+          <path d="M420 200 V446" />
+        </g>
+        <g stroke="#8a6400" stroke-width="2" fill="none" marker-end="url(#a)">
+          <path d="M600 360 H600 V400 H460 V446" />
+        </g>
+        <g stroke="#5b3fd6" stroke-width="2" fill="none" marker-end="url(#a)">
+          <path d="M235 450 V210" />
+        </g>
+        <text x="612" y="240" font-size="12" fill="#8a6400">מזמינים את הצד השני</text>
+        <text x="432" y="420" font-size="12" fill="#8a6400">האישור מגיע לנציג</text>
+        <text x="246" y="240" font-size="12" fill="#5b3fd6">עדכון לנועה</text>
+        <text x="432" y="240" font-size="12" fill="#5b3fd6">הבקשה נכנסת לתור</text>
+
+        <!-- נקודות כשל שטיפלנו בהן -->
+        <rect x="30" y="576" width="1060" height="54" rx="10" fill="#ffe8f1" />
+        <text x="1000" y="597" text-anchor="middle" font-size="13" font-weight="bold" fill="#c2185b" direction="rtl">נקודות כשל שטופלו</text>
+        <g font-size="12" fill="#c2185b">
+          <text x="560" y="618" text-anchor="middle" direction="rtl">
+            מונה של הדירה ליד ← מפנים למספר חשבון · SMS שלא נמסר או "זה לא אני" ← תיקון מיידי · מחלוקת ← תיאום ואז נציג · מסמך חסר ← השלמה בלי למלא מחדש
+          </text>
+        </g>
+      </svg>
+
+      <div class="note">
+        <h2>מה המפה מראה</h2>
+        <ul>
+          <li><strong>הבקשה אחת, אבל כל צד ממלא את החלק שלו.</strong> נועה לא מזינה פרטים של אנשים אחרים.</li>
+          <li><strong>הבקשה לא תקועה על אף אחד.</strong> היציאה בתוקף מיד, ובכניסה לנכס ההמתנה לצד השני לא מעכבת את הנציג.</li>
+          <li><strong>לכל נקודת כשל יש מוצא.</strong> זיהוי שגוי, הודעה שלא הגיעה, מחלוקת, ומסמך חסר – לכל אחת יש מסלול שממשיך ולא חוסם.</li>
+          <li><strong>הנציג רואה מה שה-AI בדק ומה שנשאר לו.</strong> אישור נעול עד שכל חריגה נסגרת בהסבר.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
